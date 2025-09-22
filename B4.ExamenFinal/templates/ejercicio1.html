@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 1</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <form method="POST" class="form">
+    <h2 class="form-title">Calculo de compras</h2>
+
+    <label for="nombre">Ingresa tu nombre</label>
+    <input id="nombre" name="nombre" type="text" required>
+
+    <label for="edad">Ingresa tu edad</label>
+    <input id="edad" name="edad" type="number" required>
+
+    <label for="cant_tarros">Ingresa la cantidad de tarros de pintura a comprar</label>
+    <input id="cant_tarros" name="cant_tarros" type="number" required>
+
+    <button type="submit" class="btn-calcular">Calcular</button>
+
+      <p>{{ resultado|safe }}</p>
+
+    <a href="{{ url_for('index') }}" class="btn-volver">Volver</a>
+
+  </form>
+</body>
+</html>

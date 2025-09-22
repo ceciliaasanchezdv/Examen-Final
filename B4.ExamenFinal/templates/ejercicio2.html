@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 2</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <form method="POST" class="form">
+    <h2 class="form-title">Inicio de sesión</h2>
+
+    <label for="nombre">Ingresa tu nombre</label>
+    <input id="nombre" name="nombre" type="text" required>
+
+    <label for="pw">Ingresa tu contraseña</label>
+    <input id="pw" name="pw" type="password" required>
+
+    <button type="submit" class="btn-verificar">Verificar</button>
+
+      <p>{{ resultado|safe }}</p>
+
+    <a href="{{ url_for('index') }}" class="btn-volver">Volver</a>
+
+  </form>
+</body>
+</html>
